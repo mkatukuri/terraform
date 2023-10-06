@@ -27,6 +27,7 @@ pipeline {
             steps {
                sh 'printenv'
             }
+         }
         stage("Env Build Number"){
                     steps{
                         echo "The build number is ${env.BUILD_NUMBER}"
