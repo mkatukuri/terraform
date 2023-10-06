@@ -20,6 +20,13 @@ pipeline {
             }
         }
 
+        stage('environment') {
+            environment {
+             AUTH = credentials('ssh-auth')
+            }
+            steps {
+               sh 'printenv'
+            }
         stage("Env Build Number"){
                     steps{
                         echo "The build number is ${env.BUILD_NUMBER}"
