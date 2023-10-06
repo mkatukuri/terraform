@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+   agent { label 'newnode' }
    options {
                    // Timeout counter starts BEFORE agent is allocated
                    timeout(time: 100, unit: 'SECONDS')
