@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    options {
+                    // Timeout counter starts BEFORE agent is allocated
+                    timeout(time: 1, unit: 'SECONDS')
+                }
      environment {
             DISABLE_AUTH = 'true'
             DB_ENGINE    = 'sqlite'
