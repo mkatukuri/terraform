@@ -21,11 +21,11 @@ pipeline {
         }
 
         stage('environment') {
-         echo 'environment..'
             environment {
              AUTH = credentials('ssh-auth')
             }
             steps {
+               echo 'environment..'
                sh 'printenv'
             }
          }
